@@ -1,6 +1,20 @@
+
+
 [package]
 name = "fluxus-gharchive-source"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+tokio = { version = "1", features = ["full"] }
+async-trait = "0.1"
+fluxus = { git = "https://github.com/lispking/fluxus.git", package = "fluxus", branch = "main", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+async-compression = { version = "0.4.23", features = ["all"] }
+
+[dev-dependencies]
+clap = { version = "4.0", features = ["derive"] }
+tracing-subscriber = "0.3.19"
+tracing = "0.1.41"
