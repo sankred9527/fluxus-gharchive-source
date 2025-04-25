@@ -41,7 +41,7 @@ mod tests {
     #[test]
     async fn test_eventtype_count() {
         
-        let mut gh_source = gharchive::GHarchiveSource::new("tests/2025-01-01-15.json.gz");
+        let mut gh_source = gharchive::GHarchiveSource::new("tests/2015-01-01-15.json");
         gh_source.init().await.expect("open input file error");
         kick_roll(gh_source).await;
 
